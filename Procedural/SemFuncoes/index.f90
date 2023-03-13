@@ -6,7 +6,7 @@ implicit none
     integer :: total_de_salarios = 0
     real :: valor, valor_calculado, soma_salarios = 0
     real, dimension(100) :: lista_salarios
-    
+
     character(len = 20) :: nome_arquivo_base = 'lista_salarios.txt'
     character(len = 20) :: nome_arquivo_resultado = 'lista_atualizada.txt'
 
@@ -26,7 +26,7 @@ implicit none
 
     close(indice_arquivo)
 
-    open(indice_arquivo_resultado, file = nome_arquivo_resultado, status = 'old')
+    open(indice_arquivo_resultado, file = nome_arquivo_resultado, status = 'new')
 
     do i = 1, total_de_salarios, 1
         valor_calculado = lista_salarios(i) * 0.9
@@ -37,6 +37,6 @@ implicit none
 
     write(indice_arquivo_resultado, *) 'Media do Valor'
     write(indice_arquivo_resultado, '(F10.2)') (soma_salarios / total_de_salarios)
-    
+
     close(indice_arquivo_resultado)
 end program paradigma_imperativo
