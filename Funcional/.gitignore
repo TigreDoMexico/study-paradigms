@@ -1,0 +1,4 @@
+## Arquivo compilado
+*.o
+*.hi
+modulo_salario
