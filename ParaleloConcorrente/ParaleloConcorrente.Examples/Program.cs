@@ -2,8 +2,8 @@
 
 Console.WriteLine("Exemplo Paralelo Concorrente");
 
-// var concorrente = new ThreadConcorrente();
-// concorrente.ExecutarConcorrencia();
+var concorrente = new ThreadConcorrente();
+concorrente.ExecutarConcorrencia();
 
 var paralelo = new ThreadParalela();
 paralelo.ExecutarParaleloComThread();
