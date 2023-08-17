@@ -22,7 +22,7 @@ Gerar imagem do Docker \
 
 Rodar docker para abrir o terminal do container (na pasta que quer compilar) \
 Windows \
-`docker run --rm -i -t -v ${pwd}:/source tigredomexico/fortran-gfortran:1.0`
+`docker run --rm -i -t -v ${pwd}:/source tigredomexico/fortran-gfortran:1.0` \
 Unix \
 `docker run --rm -i -t -v $(pwd):/source tigredomexico/fortran-gfortran:1.0`
 
