@@ -21,7 +21,10 @@ Gerar imagem do Docker \
 `docker build -t tigredomexico/fortran-gfortran:1.0 .`
 
 Rodar docker para abrir o terminal do container (na pasta que quer compilar) \
+Windows \
 `docker run --rm -i -t -v ${pwd}:/source tigredomexico/fortran-gfortran:1.0`
+Unix \
+`docker run --rm -i -t -v $(pwd):/source tigredomexico/fortran-gfortran:1.0`
 
 Compilar os módulos (Via Terminal Docker) \
 `gfortran -c formatter.f90` \
