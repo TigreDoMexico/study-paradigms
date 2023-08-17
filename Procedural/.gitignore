@@ -1,3 +1,7 @@
 # LINUX
 ## Arquivo compilado
 index
+
+## Arquivos pre-compilados
+*.o
+*.mod
