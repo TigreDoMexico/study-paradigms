@@ -10,16 +10,15 @@ module salario
         calcula_novo_salario = salario * 0.9
     end function calcula_novo_salario
 
-    subroutine obter_salarios(resultado, total)
+    subroutine obter_salarios(resultado, total, nome_arquivo)
 
         integer :: total
         real, dimension(100) :: resultado
+        character(len=*), intent(in) :: nome_arquivo
         real :: valor
         integer :: indice_arquivo = 1, io
 
-        character(len = 20) :: nome_arquivo_base = 'lista_salarios.txt'
-
-        open(indice_arquivo, file = nome_arquivo_base, status = 'old')
+        open(indice_arquivo, file = nome_arquivo, status = 'old')
 
         do
             read(indice_arquivo, *, IOSTAT = io) valor
@@ -36,16 +35,16 @@ module salario
         close(indice_arquivo)
     end subroutine obter_salarios
 
-    subroutine salvar_novos_salarios(salarios, total_de_salarios)
+    subroutine salvar_novos_salarios(salarios, total_de_salarios, nome_arquivo)
 
         integer :: total_de_salarios
         real, dimension(100) :: salarios
+        character(len=*), intent(in) :: nome_arquivo
         integer :: indice_arquivo_resultado = 2
         real :: valor_calculado, soma_salarios = 0
         integer :: i
-        character(len = 20) :: nome_arquivo_resultado = 'lista_atualizada.txt'
 
-        open(indice_arquivo_resultado, file = nome_arquivo_resultado, status = 'old')
+        open(indice_arquivo_resultado, file = nome_arquivo, status = 'old')
 
         do i = 1, total_de_salarios, 1
             valor_calculado = calcula_novo_salario(salarios(i))

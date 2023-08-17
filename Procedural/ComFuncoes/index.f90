@@ -10,6 +10,6 @@ program paradigma_procedural
     integer :: total_de_salarios = 0
     real, dimension(100) :: lista_salarios
 
-    call obter_salarios(lista_salarios, total_de_salarios)
-    call salvar_novos_salarios(lista_salarios, total_de_salarios)
+    call obter_salarios(lista_salarios, total_de_salarios, 'Files/lista_salarios.txt')
+    call salvar_novos_salarios(lista_salarios, total_de_salarios, 'Files/lista_atualizada.txt')
 end program paradigma_procedural
