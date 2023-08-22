@@ -5,12 +5,16 @@ Este código pega uma lista de números dentro de um arquivo txt e salva em outr
 ## Como rodar o código (LINUX)
 Em desenvolvimento
 
-## Como rodar o código (WINDOWS)
-Gerar imagem do Docker
-`docker build -t nacyot/haskell-ghc:apt .`
+## Como rodar (DOCKER)
+Criar imagem \
+`docker build -t tigredomexico/haskell:1.0 .` \
+\
+Rodar terminal docker \
+`docker run --rm -i -t -v $(pwd):/source tigredomexico/haskell:1.0`
 
-Rodar docker e usar terminal
-`docker run -i -t -v ${pwd}:/source nacyot/haskell-ghc:apt`
-
-Compilar o módulo dentro do GHCI (Via Terminal do Docker)
-`:l modulo_salario`
+### Comandos Haskell
+Compilar arquivo para rodar no terminal \
+`ghci -> :l calcula_salario` \
+\
+Compilar arquivo para gerar o executável \
+`ghc calcula_salario.hs`

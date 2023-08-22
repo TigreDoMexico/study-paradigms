@@ -18,7 +18,7 @@ obterNome (Funcionario nome _) = nome
 
 main :: IO ()
 main = do
-    putStrLn "MODULO SALÁRIO"
+    putStrLn "CADASTRO FUNCIONARIO"
 
     putStrLn "Digite o nome do funcionario"
     funcionarioNome <- getLine

@@ -1,4 +1,4 @@
-FROM nacyot/ubuntu
+FROM ubuntu
 
 RUN apt-get update
 RUN apt-get install -y haskell-platform

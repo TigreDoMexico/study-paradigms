@@ -1,4 +1,5 @@
 ## Arquivo compilado
 *.o
 *.hi
-modulo_salario
+calcula_salario
+cadastro_funcionario
